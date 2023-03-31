@@ -1,74 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.dev1 (Python 3.11.1 on darwin)" generated="20230127 17:45:47.025" rpa="false" schemaversion="3">
-<suite id="s1" name="Test" source="/Users/leannezammit/tests/test.robot">
+<robot generator="Robot 6.1.dev1 (Python 3.11.2 on darwin)" generated="20230331 19:26:15.541" rpa="false" schemaversion="3">
+<suite id="s1" name="Leanne" source="/Users/leannezammit/RobotDemo/Login/leanne.robot">
 <test id="s1-t1" name="Login User with Password" line="9">
 <kw name="Connect to Server" library="keywords">
-<kw name="Connect">
+<kw name="Connect" library="LoginLibrary">
 <arg>fe80::aede:48ff:fe00:1122</arg>
-<msg timestamp="20230127 17:45:47.035" level="FAIL">No keyword with name 'Connect' found.</msg>
-<status status="FAIL" starttime="20230127 17:45:47.035" endtime="20230127 17:45:47.035"/>
+<msg timestamp="20230331 19:26:15.551" level="FAIL">TypeError: LoginObject() takes no arguments</msg>
+<status status="FAIL" starttime="20230331 19:26:15.551" endtime="20230331 19:26:15.552"/>
 </kw>
-<status status="FAIL" starttime="20230127 17:45:47.034" endtime="20230127 17:45:47.035"/>
+<status status="FAIL" starttime="20230331 19:26:15.551" endtime="20230331 19:26:15.552"/>
 </kw>
 <kw name="Login User" library="keywords">
 <arg>ironman</arg>
 <arg>1234567890</arg>
-<status status="NOT RUN" starttime="20230127 17:45:47.035" endtime="20230127 17:45:47.035"/>
-</kw>
-<kw name="Verify Valid Login" library="keywords">
-<arg>Tony Stark</arg>
-<status status="NOT RUN" starttime="20230127 17:45:47.035" endtime="20230127 17:45:47.035"/>
+<status status="NOT RUN" starttime="20230331 19:26:15.552" endtime="20230331 19:26:15.552"/>
 </kw>
 <kw name="Close Server Connection" library="keywords" type="TEARDOWN">
-<kw name="Disconnect">
-<msg timestamp="20230127 17:45:47.036" level="FAIL">No keyword with name 'Disconnect' found.</msg>
-<status status="FAIL" starttime="20230127 17:45:47.036" endtime="20230127 17:45:47.036"/>
+<kw name="Disconnect" library="LoginLibrary">
+<status status="PASS" starttime="20230331 19:26:15.552" endtime="20230331 19:26:15.552"/>
 </kw>
-<status status="FAIL" starttime="20230127 17:45:47.035" endtime="20230127 17:45:47.036">No keyword with name 'Disconnect' found.</status>
+<status status="PASS" starttime="20230331 19:26:15.552" endtime="20230331 19:26:15.552"/>
 </kw>
 <tag>positive</tag>
-<status status="FAIL" starttime="20230127 17:45:47.034" endtime="20230127 17:45:47.036">No keyword with name 'Connect' found.
-
-Also teardown failed:
-No keyword with name 'Disconnect' found.</status>
+<status status="FAIL" starttime="20230331 19:26:15.551" endtime="20230331 19:26:15.552">TypeError: LoginObject() takes no arguments</status>
 </test>
 <test id="s1-t2" name="Denied Login with Wrong Password" line="15">
 <kw name="Connect to Server" library="keywords">
-<kw name="Connect">
+<kw name="Connect" library="LoginLibrary">
 <arg>fe80::aede:48ff:fe00:1122</arg>
-<msg timestamp="20230127 17:45:47.037" level="FAIL">No keyword with name 'Connect' found.</msg>
-<status status="FAIL" starttime="20230127 17:45:47.037" endtime="20230127 17:45:47.037"/>
+<msg timestamp="20230331 19:26:15.552" level="FAIL">TypeError: LoginObject() takes no arguments</msg>
+<status status="FAIL" starttime="20230331 19:26:15.552" endtime="20230331 19:26:15.553"/>
 </kw>
-<status status="FAIL" starttime="20230127 17:45:47.036" endtime="20230127 17:45:47.037"/>
+<status status="FAIL" starttime="20230331 19:26:15.552" endtime="20230331 19:26:15.553"/>
 </kw>
 <kw name="Run Keyword And Expect Error" library="BuiltIn">
 <arg>*Invalid Password</arg>
-<arg>Login User</arg>
+<arg>keywords.Login User</arg>
 <arg>ironman</arg>
 <arg>123</arg>
 <doc>Runs the keyword and checks that the expected error occurred.</doc>
-<status status="NOT RUN" starttime="20230127 17:45:47.037" endtime="20230127 17:45:47.037"/>
+<status status="NOT RUN" starttime="20230331 19:26:15.553" endtime="20230331 19:26:15.553"/>
 </kw>
 <kw name="Verify Unauthorised Access" library="keywords">
-<status status="NOT RUN" starttime="20230127 17:45:47.037" endtime="20230127 17:45:47.037"/>
+<status status="NOT RUN" starttime="20230331 19:26:15.553" endtime="20230331 19:26:15.553"/>
 </kw>
 <kw name="Close Server Connection" library="keywords" type="TEARDOWN">
-<kw name="Disconnect">
-<msg timestamp="20230127 17:45:47.038" level="FAIL">No keyword with name 'Disconnect' found.</msg>
-<status status="FAIL" starttime="20230127 17:45:47.038" endtime="20230127 17:45:47.038"/>
+<kw name="Disconnect" library="LoginLibrary">
+<status status="PASS" starttime="20230331 19:26:15.553" endtime="20230331 19:26:15.553"/>
 </kw>
-<status status="FAIL" starttime="20230127 17:45:47.037" endtime="20230127 17:45:47.038">No keyword with name 'Disconnect' found.</status>
+<status status="PASS" starttime="20230331 19:26:15.553" endtime="20230331 19:26:15.553"/>
 </kw>
 <tag>negative</tag>
-<status status="FAIL" starttime="20230127 17:45:47.036" endtime="20230127 17:45:47.038">No keyword with name 'Connect' found.
-
-Also teardown failed:
-No keyword with name 'Disconnect' found.</status>
+<status status="FAIL" starttime="20230331 19:26:15.552" endtime="20230331 19:26:15.553">TypeError: LoginObject() takes no arguments</status>
 </test>
 <doc>A test suite for valid login.
 
 Keywords are imported from the resource file</doc>
-<status status="FAIL" starttime="20230127 17:45:47.026" endtime="20230127 17:45:47.038"/>
+<status status="FAIL" starttime="20230331 19:26:15.541" endtime="20230331 19:26:15.553"/>
 </suite>
 <statistics>
 <total>
@@ -79,21 +67,10 @@ Keywords are imported from the resource file</doc>
 <stat pass="0" fail="1" skip="0">positive</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="Leanne">Leanne</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230127 17:45:47.034" level="ERROR">Error in file '/Users/leannezammit/tests/keywords.resource' on line 4: Importing library '/Users/leannezammit/tests/CustomLibrary.py' failed: ModuleNotFoundError: No module named 'TestObject'
-Traceback (most recent call last):
-  File "/Users/leannezammit/tests/CustomLibrary.py", line 1, in &lt;module&gt;
-    from TestObject import TestObject
-PYTHONPATH:
-  /Users/leannezammit/tests
-  /Library/Frameworks/Python.framework/Versions/3.11/bin
-  /Library/Frameworks/Python.framework/Versions/3.11/lib/python311.zip
-  /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11
-  /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload
-  /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages
-  /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/robotframework-6.1.dev1-py3.11.egg</msg>
+<msg timestamp="20230331 19:26:15.549" level="ERROR">Error in file '/Users/leannezammit/RobotDemo/Login/keywords.resource' on line 20: Creating keyword 'Get Server Version' failed: User keyword 'Get Server Version' contains no keywords.</msg>
 </errors>
 </robot>

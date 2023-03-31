@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     This is a resource file, that can contain variables and keywords.
 ...               Keywords defined here can be used where this Keywords.resource in loaded.
-Library           CustomLibrary.py
+Library           LoginLibrary.py
 
 
 *** Keywords ***
@@ -16,6 +16,8 @@ Login User
     Set Login Name    ${login}
     Set Password    ${password}
     Execute Login
+
+Get Server Version
 
 Verify Valid Login
     [Arguments]    ${exp_full_name}
